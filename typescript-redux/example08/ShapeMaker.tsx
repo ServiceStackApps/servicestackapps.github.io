@@ -1,11 +1,10 @@
-﻿/// <reference path='../../typings/main.d.ts'/>
+﻿/// <reference path='../../typings/browser.d.ts'/>
 
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { isDark } from './ColorPicker';
-import { reduxify } from './core';
 
-@reduxify(
+@connect(
     (state) => ({
         width: state.width, height: state.height, color: state.color,
         top: state.nextShapeId * 10, left: state.nextShapeId * 10
